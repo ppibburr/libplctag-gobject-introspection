@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<!-- automatically generated with valabind -->
+<!-- To compile: g-ir-compiler foo.gir > foo.typelib -->
+<repository version="1.2"
+	xmlns="http://www.gtk.org/introspection/core/1.0"
+	xmlns:c="http://www.gtk.org/introspection/c/1.0"
+	xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <package name="plctag-1.0"/>
+  <c:include name="libplctag.h"/>
+  <namespace version="1.0" name="PlcTag" shared-library="libplctag.so">
+
+  <record name="Tag" c:type="int32_t">
+<function name="create" c:identifier="plc_tag_create">
+  <return-value transfer-ownership="none">
+      <type name="Tag" c:type="int32_t"/>
+  </return-value>
+  <parameters>
+    <parameter name="path" transfer-ownership="none">
+      <type name="utf8" c:type="char *"/>
+    </parameter>
+    <parameter name="timeout" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</function>
+<method name="status" c:identifier="plc_tag_status">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+  </parameters>
+</method>
+<method name="size" c:identifier="plc_tag_size">
+  <return-value transfer-ownership="none">
+      <type name="gsize" c:type="gsize"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+  </parameters>
+</method>
+<method name="get_int8" c:identifier="plc_tag_get_int8">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_int8" c:identifier="plc_tag_set_int8">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gint8" c:type="gint8"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_int16" c:identifier="plc_tag_get_int16">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_int16" c:identifier="plc_tag_set_int16">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gint16" c:type="gint16"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_int32" c:identifier="plc_tag_get_int32">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_int32" c:identifier="plc_tag_set_int32">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gint" c:type="gint32"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_int64" c:identifier="plc_tag_get_int64">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_int64" c:identifier="plc_tag_set_int64">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gint64" c:type="long long"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_uint8" c:identifier="plc_tag_get_uint8">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_uint8" c:identifier="plc_tag_set_uint8">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="guint8" c:type="unsigned char"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_uint16" c:identifier="plc_tag_get_uint16">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_uint16" c:identifier="plc_tag_set_uint16">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="guint16" c:type="unsigned short"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_uint32" c:identifier="plc_tag_get_uint32">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_uint32" c:identifier="plc_tag_set_uint32">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="guint" c:type="unsigned int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_uint64" c:identifier="plc_tag_get_uint64">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_uint64" c:identifier="plc_tag_set_uint64">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="guint64" c:type="unsigned long long"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_float32" c:identifier="plc_tag_get_float32">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_float32" c:identifier="plc_tag_set_float32">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gfloat" c:type="float"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_float64" c:identifier="plc_tag_get_float64">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_float64" c:identifier="plc_tag_set_float64">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gdouble" c:type="double"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_bit" c:identifier="plc_tag_get_bit">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_bit" c:identifier="plc_tag_set_bit">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="read" c:identifier="plc_tag_read">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="timeout" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="write" c:identifier="plc_tag_write">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="timeout" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="destroy" c:identifier="plc_tag_destroy">
+  <return-value transfer-ownership="none">
+    <type name="none"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+  </parameters>
+</method>
+  </record>
+
+
+
+  </namespace>
+</repository>
