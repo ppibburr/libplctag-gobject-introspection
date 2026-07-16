@@ -5,9 +5,9 @@
 	xmlns="http://www.gtk.org/introspection/core/1.0"
 	xmlns:c="http://www.gtk.org/introspection/c/1.0"
 	xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
-  <package name="plctag-1.0"/>
+  <package name="PlcTag-1.0"/>
   <c:include name="libplctag.h"/>
-  <namespace version="1.0" name="PlcTag" shared-library="libplctag.so">
+  <namespace version="1.0" name="PlcTag">
 
   <record name="Tag" c:type="int32_t">
 <function name="create" c:identifier="plc_tag_create">
@@ -23,7 +23,7 @@
     </parameter>
   </parameters>
 </function>
-<method name="status" c:identifier="plc_tag_status">
+<method name="get_int_attribute" c:identifier="plc_tag_get_int_attribute">
   <return-value transfer-ownership="none">
       <type name="gint" c:type="int"/>
   </return-value>
@@ -31,16 +31,47 @@
     <instance-parameter name="this" transfer-ownership="none">
       <type name="Plc.Tag" c:type="int32_t*"/>
     </instance-parameter>
+    <parameter name="name" transfer-ownership="none">
+      <type name="utf8" c:type="char *"/>
+    </parameter>
+    <parameter name="default_value" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
   </parameters>
 </method>
-<method name="size" c:identifier="plc_tag_size">
+<method name="set_int_attribute" c:identifier="plc_tag_set_int_attribute">
   <return-value transfer-ownership="none">
-      <type name="gsize" c:type="gsize"/>
+      <type name="gint" c:type="int"/>
   </return-value>
   <parameters>
     <instance-parameter name="this" transfer-ownership="none">
       <type name="Plc.Tag" c:type="int32_t*"/>
     </instance-parameter>
+    <parameter name="name" transfer-ownership="none">
+      <type name="utf8" c:type="char *"/>
+    </parameter>
+    <parameter name="attr" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_byte_array_attribute" c:identifier="plc_tag_get_byte_array_attribute">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="attr_name" transfer-ownership="none">
+      <type name="utf8" c:type="char *"/>
+    </parameter>
+    <parameter name="buffer" transfer-ownership="none" allow-none="1">
+      <type name="gpointer" c:type="unsigned char*"/>
+    </parameter>
+    <parameter name="len" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
   </parameters>
 </method>
 <method name="get_int8" c:identifier="plc_tag_get_int8">
@@ -362,6 +393,118 @@
     </parameter>
   </parameters>
 </method>
+<method name="get_string_total_length" c:identifier="plc_tag_get_string_total_length">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_string_capacity" c:identifier="plc_tag_get_string_capacity">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_string" c:identifier="plc_tag_get_string">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="buff" transfer-ownership="none">
+      <type name="utf8" c:type="char *"/>
+    </parameter>
+    <parameter name="size" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_string_length" c:identifier="plc_tag_get_string_length">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_string" c:identifier="plc_tag_set_string">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="val" transfer-ownership="none">
+      <type name="utf8" c:type="char *"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="get_raw_bytes" c:identifier="plc_tag_get_raw_bytes">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="buffer" transfer-ownership="none" allow-none="1">
+      <type name="gpointer" c:type="unsigned char*"/>
+    </parameter>
+    <parameter name="buffer_length" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
+<method name="set_raw_bytes" c:identifier="plc_tag_set_raw_bytes">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
+    <parameter name="offset" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+    <parameter name="buffer" transfer-ownership="none" allow-none="1">
+      <type name="gpointer" c:type="unsigned char*"/>
+    </parameter>
+    <parameter name="buffer_length" transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+    </parameter>
+  </parameters>
+</method>
 <method name="read" c:identifier="plc_tag_read">
   <return-value transfer-ownership="none">
       <type name="gint" c:type="int"/>
@@ -386,6 +529,16 @@
     <parameter name="timeout" transfer-ownership="none">
       <type name="gint" c:type="int"/>
     </parameter>
+  </parameters>
+</method>
+<method name="plc_tag_abort" c:identifier="plc_tag_plc_tag_abort">
+  <return-value transfer-ownership="none">
+      <type name="gint" c:type="int"/>
+  </return-value>
+  <parameters>
+    <instance-parameter name="this" transfer-ownership="none">
+      <type name="Plc.Tag" c:type="int32_t*"/>
+    </instance-parameter>
   </parameters>
 </method>
 <method name="destroy" c:identifier="plc_tag_destroy">
